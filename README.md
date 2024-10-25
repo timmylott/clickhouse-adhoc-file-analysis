@@ -22,7 +22,7 @@ Then run the following commmand:
 ./clickhouse server
 ```
 
-ClickHouse server is now running on your local machine.  Go to the direction where clickhouse was installed and you see a sub-directory called `user-files`.  Download the `00_generate_select.command` from this repo into that directory.
+ClickHouse server is now running on your local machine.  Go to the directory where clickhouse was installed and you see a sub-directory called `user-files`.  Download the `00_generate_select.command` from this repo into that directory.
 
 Browse to https://dbeaver.io/download/ and following the install instuctions for your OS.
 
