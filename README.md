@@ -4,7 +4,7 @@ This is great for large csv files that exceed Excel's row limit, allows you to q
 
 These instuctions are for MacOS
 
-Run clickhouse server on your local machine and use DBeaver as a client.  There is a bash script here that you can run that will generate the select statements for your files to quickly get you analying your files.
+Run clickhouse server on your local machine and use DBeaver as a client.  There is a bash script here that you can run that will generate the select statements for your files to quickly get you analysing your files.
 
 ## Some Links
 - ClickHouse quick start - https://clickhouse.com/clickhouse#getting_started
