@@ -7,6 +7,6 @@ These instuctions are for MacOS
 We will run clickhouse server on you machine and use DBeaver as client to connect and run sql against csv files
 
 ## Some Links:
-ClickHouse quick start - https://clickhouse.com/clickhouse#getting_started
-Quick Install - https://clickhouse.com/docs/en/install
-DBeaver Community - https://dbeaver.io/download/
+- ClickHouse quick start - https://clickhouse.com/clickhouse#getting_started
+- Quick Install - https://clickhouse.com/docs/en/install
+- DBeaver Community - https://dbeaver.io/download/
