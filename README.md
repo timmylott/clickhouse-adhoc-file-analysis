@@ -15,6 +15,8 @@ Run clickhouse server on your local machine and use DBeaver as a client.  There 
 
 Open a terminal and run this:
 ```
+mkdir clickhouse
+cd clickhouse
 curl https://clickhouse.com/ | sh
 ```
 Then run the following commmand:
