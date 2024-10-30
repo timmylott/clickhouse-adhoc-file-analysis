@@ -59,7 +59,7 @@ SELECT * FROM file ('Electric_Vehicle_Population_Data.csv')
 SELECT * FROM file ('flights-1m.parquet')
 SELECT * FROM file ('states.csv')
 ```
-That creates a file called `00_user_files_select.sql` in user_files with select statements for the files in that directory.  The file has more than what is show above, that is just to give an indicator that it actually did something.
+That creates a file called `00_user_files_select.sql` in user_files with select statements for the files in that directory.  The file has more than what is shown above, that is just to give an indicator that it actually did something.
 
 ## 00_generate_select.command
 As mentioned above this is a bash script that when executed create select statements for all the files located in the user_files directory into a file called `00_user_files_select.sql`.
