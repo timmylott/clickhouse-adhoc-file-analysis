@@ -69,7 +69,7 @@ As mentioned above this is a bash script that when executed create select statem
 * This assumes the first line in the CSV file is column names.  If your CSV doesn't have that, you will have to manually tweak the select statements.
 * Parquet will be without the columns. Parquet usually have metadata about the columns and data types.
 * Warning - This script will always overwrite `00_user_files_select.sql`. So if you start building a more complex query and save it in that same file it will get overwritten next time you run the generate select script.
-* This does not account for all types of delimited text files or fixed width, ragged right, etc.  If you have those types of files you should be able to easily tweak what is here to accommodate that.
+* This does not account for all types of delimited text files or fixed width, ragged right, etc.  If you have those types of files you should be able to easily tweak what is here to accommodate that.  I believe in you.
 
 ## 00_user_files_select.sql
 After you run `00_generate_select.command` the contents of `00_user_files_select.sql` should be:
