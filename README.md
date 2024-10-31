@@ -104,7 +104,7 @@ When you are finished go back to the terminal window where ClickHouse server is 
 
 
 ## DBeaver slow to connect
-If DBeaver is slow to connect copy the `config.d` from this repo into you ClickHouse install directory and restart ClickHouse.  This will override the `http_max_tries` parameter. Newer versions of ClickHouse have a default of 10.  You'll see in the logs the following 10 times as it keeps retrying:
+If DBeaver is slow to connect copy the `config.d` folder from this repo into your ClickHouse install directory and restart ClickHouse.  This will override the `http_max_tries` parameter. Newer versions of ClickHouse have a default of 10.  You'll see in the logs the following 10 times as it keeps retrying:
 ```
 <Debug> ReadWriteBufferFromHTTP: Failed to make request to 'http://127.0.0.1:9019/ping?use_connection_pooling=1'. Error: 'Connection refused'
 ```
