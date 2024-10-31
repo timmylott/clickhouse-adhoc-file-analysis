@@ -71,9 +71,6 @@ As mentioned above this is a bash script that when executed creates select state
 * Why is it prefixed with 00?  When you sort the directory this will push it to the top so you can easily find it.  If you have lots of files this is helpful.
 * If CSV you will get 2 select statements.  One without the columns and one with all the columns with a default data type of string.  Without the columns the file table function will still attempt to derive the columns from the file. I've had some csv files throw errors when the data type wasn't detected correctly.  So this will give you all the columns with a default string data type and you can adjust from there if needed.  This is quick and dirty stuff.  Just to get you to querying a file as quickly as possible.
 * This assumes the first line in the CSV file is column names.  If your CSV doesn't have that, you will have to manually tweak the select statements.
-* Parquet will be without the columns. Parquet usually have metadata about the columns and data types.
-* Warning - This script will always overwrite `00_user_files_select.sql`. So if you start building a more complex query and save it in that same file it will get overwritten next time you run the generate select script.
-* This does not account for all types of delimited text files or fixed width, ragged right, etc.  If you have those types of files you should be able to easily tweak what is here to accommodate that.  I believe in you.
 * Parquet will be without the columns. Parquet usually has metadata about the columns and data types.
 * **Warning** - This script will always overwrite `00_user_files_select.sql`. So if you start building a more complex query and save it in that same file it will get overwritten next time you run the generate select script.
 * This does not account for all types of delimited text files or fixed width, ragged right, etc.  If you have those types of files you should be able to easily tweak what is here to accommodate that.  I know you can, I believe in you.
@@ -102,14 +99,12 @@ You can now query those files using SQL.
 
 When you are finished go back to the terminal window where ClickHouse server is running and do control+c to stop the server.
 
-
 ## DBeaver slow to connect
 If DBeaver is slow to connect copy the `config.d` folder from this repo into your ClickHouse install directory and restart ClickHouse.  This will override the `http_max_tries` parameter. Newer versions of ClickHouse have a default of 10.  You'll see in the logs the following 10 times as it keeps retrying:
 ```
 <Debug> ReadWriteBufferFromHTTP: Failed to make request to 'http://127.0.0.1:9019/ping?use_connection_pooling=1'. Error: 'Connection refused'
 ```
-I googled and reaserached and couldn't find what or why there is that error. I found the parameter `http_max_tries` setting to 1 stops it from being annoying.
-
+I googled and researched and couldn't find what or why there is that error. I found the parameter `http_max_tries` setting to 1 stops it from being annoying.
 
 ## Additional Sample Queries
 ```
