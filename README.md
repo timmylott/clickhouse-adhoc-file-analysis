@@ -43,6 +43,13 @@ You should now have a localhost connection in the left panel with a default data
 
 ![localhost-default](./assets/localhost-default.png)
 
+## DBeaver slow to connect
+If DBeaver is slow to connect copy the `config.d` folder from this repo into your ClickHouse install directory and restart ClickHouse.  This will override the `http_max_tries` parameter. Newer versions of ClickHouse have a default of 10.  You'll see in the logs the following 10 times as it keeps retrying:
+```
+<Debug> ReadWriteBufferFromHTTP: Failed to make request to 'http://127.0.0.1:9019/ping?use_connection_pooling=1'. Error: 'Connection refused'
+```
+I googled and researched and couldn't find what or why there is that error. I found the parameter `http_max_tries` setting to 1 stops it from being annoying.
+
 ## user_files
 Go to the directory where ClickHouse was installed and you will see a sub-directory called `user_files`.  Copy the 4 files from the `user_files` directory from this repo into the `user_files` directory where ClickHouse was installed on your machine.
 
@@ -98,13 +105,6 @@ DBeaver is now connected to your locally running ClickHouse server with default 
 You can now query those files using SQL.
 
 When you are finished go back to the terminal window where ClickHouse server is running and do control+c to stop the server.
-
-## DBeaver slow to connect
-If DBeaver is slow to connect copy the `config.d` folder from this repo into your ClickHouse install directory and restart ClickHouse.  This will override the `http_max_tries` parameter. Newer versions of ClickHouse have a default of 10.  You'll see in the logs the following 10 times as it keeps retrying:
-```
-<Debug> ReadWriteBufferFromHTTP: Failed to make request to 'http://127.0.0.1:9019/ping?use_connection_pooling=1'. Error: 'Connection refused'
-```
-I googled and researched and couldn't find what or why there is that error. I found the parameter `http_max_tries` setting to 1 stops it from being annoying.
 
 ## Additional Sample Queries
 ```
