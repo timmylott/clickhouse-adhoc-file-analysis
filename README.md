@@ -1,4 +1,4 @@
-# How to use ClickHouse to do quick adhoc file analsysis
+# How to use ClickHouse to do quick adhoc file analysis
 
 Walkthrough to get ClickHouse server running on your local machine and use DBeaver as a client to query csv/parquet files.  There is a bash script here that you can run that will generate the select statements for your files to quickly get you analysing data.
 
